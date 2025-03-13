@@ -6,6 +6,7 @@ export interface Team {
 
 export interface TeamDetails {
   color?: string;
+  logo?: string;
 }
 
 export interface Matchup {
