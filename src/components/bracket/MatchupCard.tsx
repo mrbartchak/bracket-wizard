@@ -1,11 +1,7 @@
 import { Matchup } from "@/types/bracket";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  CardContent
 } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator";
 import { TeamCard } from "@/components/bracket/TeamCard";

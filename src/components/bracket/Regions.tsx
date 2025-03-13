@@ -1,6 +1,4 @@
 import { MatchupCard } from "@/components/bracket/MatchupCard"
-import { Matchup } from "@/types/bracket"
-import { Team } from "@/types/bracket";
 import { ChampionshipCard } from "./ChampionshipCard";
 import { matchups } from "@/data/teams";
 

@@ -1,5 +1,4 @@
 import { Team } from "@/types/bracket";
-import { Badge } from "@/components/ui/badge"
 
 interface TeamCardProps {
   team: Team | null;

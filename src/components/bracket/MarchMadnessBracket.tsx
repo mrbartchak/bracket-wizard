@@ -1,6 +1,3 @@
-import { MatchupCard } from "@/components/bracket/MatchupCard"
-import { Matchup } from "@/types/bracket";
-import { Team } from "@/types/bracket";
 import { EastRegion, WestRegion, FinalFour, Championship } from "@/components/bracket/Regions";
 
 export function MarchMadnessBracket() {
