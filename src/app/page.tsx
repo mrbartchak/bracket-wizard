@@ -1,7 +1,9 @@
-import Image from "next/image";
+import { MarchMadnessBracket } from "@/components/bracket/MarchMadnessBracket";
 
 export default function Home() {
   return (
-    <div>Bracket Wizard</div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <MarchMadnessBracket />
+    </div>
   );
 }
