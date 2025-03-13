@@ -10,14 +10,14 @@ export function TeamCard({ team: Team }: TeamCardProps) {
     <main className="flex flex-row space-x-2">
       {Team?.seed && (
         <Badge
-          className="w-8 text-center font-bold"
+          className="w-10 text-center font-bold"
           style={{ background: Team?.details?.color ?? "black" }}
         >
           {Team?.seed}
         </Badge>
       )}
       <p
-        className="font-bold"
+        className="font-bold text-sm"
         style={{ color: Team ? Team.details?.color ?? "black" : "lightgray" }}
       >
         {Team?.name ?? "TBD"}

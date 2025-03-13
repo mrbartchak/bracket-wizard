@@ -26,18 +26,43 @@ const matchup: Matchup = {
 
 export function MarchMadnessBracket() {
   return (
-    <main className="flex flex-row items-center space-x-4">
-      <div className="space-y-4">
-        <MatchupCard matchup={matchup} />
-        <MatchupCard matchup={null} />
+    <main className="w-full p-4">
+      <div className="flex flex-row justify-between border">
+        {/*East*/}
+        <div className="flex flex-row items-center space-x-2">
+          {/*Round 1*/}
+          <div className="space-y-2">
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+            <MatchupCard matchup={matchup} />
+          </div>
+          <div className="flex flex-col h-full justify-between py-16">
+            <MatchupCard matchup={null} />
+            <MatchupCard matchup={null} />
+            <MatchupCard matchup={null} />
+            <MatchupCard matchup={null} />
+          </div>
+        </div>
+        {/*West*/}
+        <div>
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+          <MatchupCard matchup={matchup} />
+        </div>
       </div>
-          <div className="space-y-4">
-          <MatchupCard matchup={null} />
-      </div>
-      <div className="space-y-4">
-          <MatchupCard matchup={null} />
-          <MatchupCard matchup={null} />
-      </div>
+
+      {/*South*/}
+      {/*Midwest*/}
     </main>
   );
 }
