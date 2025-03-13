@@ -70,7 +70,7 @@ const teams: Team[] = [
 
 const matchups = teams.reduce((acc, team, index) => {
   if (index % 2 === 0) {
-    let matchup: Matchup = {
+    const matchup: Matchup = {
       team1: teams[index],
       team2: teams[index + 1],
     }
