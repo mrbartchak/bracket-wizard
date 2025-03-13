@@ -17,7 +17,7 @@ interface MatchupCardProps {
 export function MatchupCard({ matchup }: MatchupCardProps) {
   return (
     <div>
-      <Card className="w-48 py-3 drop-shadow-2xl">
+      <Card className="w-52 py-3 drop-shadow-2xl">
         <CardContent className="space-y-2">
           <TeamCard team={matchup?.team1 ?? null} />
           <Separator />
