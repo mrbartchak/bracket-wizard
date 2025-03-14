@@ -1,6 +1,5 @@
 import { MatchupCard } from "@/components/bracket/MatchupCard"
 import { ChampionshipCard } from "./ChampionshipCard";
-import { matchups } from "@/data/teams";
 import { Matchup } from "@/types/bracket";
 
 interface RegionProps {

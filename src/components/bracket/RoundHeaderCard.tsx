@@ -26,7 +26,7 @@ export function RoundHeaderCard() {
       <Card className="py-4">
         <CardHeader className="flex flex-row justify-between py-0 items-center">
           <CardTitle>
-            Men's NCAA March Madness Tournament Bracket 2025
+            Men&apos;s NCAA March Madness Tournament Bracket 2025
           </CardTitle>
           <ProfileHoverCard />
         </CardHeader>
@@ -70,6 +70,7 @@ function ProfileHoverCard() {
         <div className="flex flex-row items-center space-x-4">
           <Avatar className="w-16 h-auto">
             <AvatarImage src="https://www.mattbartchak.com/images/profile.jpg" />
+            <AvatarFallback>MB</AvatarFallback>
           </Avatar>
           <div>
             <p className="text-sm font-semibold">Matthew Bartchak</p>

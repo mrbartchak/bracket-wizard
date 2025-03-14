@@ -15,6 +15,6 @@ export async function GET() {
 
     return NextResponse.json({ teams }, { status: 200 });
   } catch (err) {
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json({ err: "Internal Server Error" }, { status: 500 });
   }
 }

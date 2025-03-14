@@ -5,6 +5,7 @@ import { Team } from "@/types/bracket";
 import { Matchup } from "@/types/bracket";
 import { Region, FinalFour, Championship } from "@/components/bracket/Regions";
 import TournamentChampionCard from "@/components/bracket/TournamentChampionCard";
+import { TeamDTO } from "@/types/dto";
 
 export function MarchMadnessBracket() {
 
@@ -18,7 +19,7 @@ export function MarchMadnessBracket() {
         const data = await response.json();
         
         if (data.teams) {
-          const mappedTeams = data.teams.map((team: any) => ({
+          const mappedTeams = data.teams.map((team: TeamDTO) => ({
             name: team.team_name,
             seed: Math.floor(team.team_id / 5) + 1,
             logo: team.team_logo,
