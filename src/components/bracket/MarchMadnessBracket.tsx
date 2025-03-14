@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Team } from "@/types/bracket";
 import { Matchup } from "@/types/bracket";
 import { Region, FinalFour, Championship } from "@/components/bracket/Regions";
+import TournamentChampionCard from "@/components/bracket/TournamentChampionCard";
 
 export function MarchMadnessBracket() {
 
@@ -55,7 +56,7 @@ export function MarchMadnessBracket() {
   }, [teams]);
 
   return (
-    <main className="flex flex-col space-y-24 w-full h-full">
+    <main className="flex flex-col space-y-12 w-full h-full">
       <div className="flex flex-row h-full space-x-4">
         <Region
           round1={matchups.slice(0, 8)}
@@ -77,7 +78,7 @@ export function MarchMadnessBracket() {
           <Championship />
           <FinalFour />
         </div>
-        <FinalFour />
+        <TournamentChampionCard />
       </div>
       <div className="flex flex-row h-full space-x-4">
         <Region
