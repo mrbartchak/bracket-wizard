@@ -13,13 +13,14 @@ interface ChampionshipCardProps {
 
 export function ChampionshipCard({ matchup }: ChampionshipCardProps) {
   return (
-    <div>
+    <div className="">
       <Card className="w-96 h-36 py-3 drop-shadow-2xl">
         <CardHeader>
           <CardTitle className="text-bold text-xl text-center">
             National Championship
           </CardTitle>
         </CardHeader>
+        <Separator />
         <CardContent className="flex flex-row justify-between space-x-4">
           <div className="flex flex-1 flex-row items-center space-x-4">
             <p>{matchup?.team1?.name}</p>

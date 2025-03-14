@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Team } from "@/types/bracket";
 import { Matchup } from "@/types/bracket";
-import { EastRegion, WestRegion, FinalFour, Championship } from "@/components/bracket/Regions";
+import { Region, FinalFour, Championship } from "@/components/bracket/Regions";
 
 export function MarchMadnessBracket() {
 
@@ -19,7 +19,7 @@ export function MarchMadnessBracket() {
         if (data.teams) {
           const mappedTeams = data.teams.map((team: any) => ({
             name: team.team_name,
-            seed: team.team_id,
+            seed: Math.floor(team.team_id / 5) + 1,
             logo: team.team_logo,
           }));
           setTeams(mappedTeams);
@@ -55,36 +55,43 @@ export function MarchMadnessBracket() {
   }, [teams]);
 
   return (
-    <main className="w-full h-full p-4">
-      <div className="flex flex-row h-full justify-between">
-        <EastRegion
+    <main className="flex flex-col space-y-24 w-full h-full p-4">
+      <div className="flex flex-row h-full space-x-52">
+        <Region
           round1={matchups.slice(0, 8)}
           round2={null}
           sweet16={null}
           elite8={null}
         />
-        <FinalFour />
-        <WestRegion
+        <Region
           round1={matchups.slice(8, 16)}
           round2={null}
           sweet16={null}
           elite8={null}
+          right={true}
         />
       </div>
-      <Championship />
-      <div className="flex flex-row h-full justify-between">
-        <EastRegion
+      <div className="flex flex-col items-center space-y-8">
+        <div className="flex flex-row space-x-12 justify-center">
+          <FinalFour />
+          <Championship />
+          <FinalFour />
+        </div>
+        <FinalFour />
+      </div>
+      <div className="flex flex-row h-full space-x-52">
+        <Region
           round1={matchups.slice(16, 24)}
           round2={null}
           sweet16={null}
           elite8={null}
         />
-        <FinalFour />
-        <WestRegion
+        <Region
           round1={matchups.slice(24, 32)}
           round2={null}
           sweet16={null}
           elite8={null}
+          right={true}
         />
       </div>
     </main>
