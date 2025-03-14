@@ -55,8 +55,8 @@ export function MarchMadnessBracket() {
   }, [teams]);
 
   return (
-    <main className="flex flex-col space-y-24 w-full h-full p-4">
-      <div className="flex flex-row h-full space-x-52">
+    <main className="flex flex-col space-y-24 w-full h-full">
+      <div className="flex flex-row h-full space-x-4">
         <Region
           round1={matchups.slice(0, 8)}
           round2={null}
@@ -79,7 +79,7 @@ export function MarchMadnessBracket() {
         </div>
         <FinalFour />
       </div>
-      <div className="flex flex-row h-full space-x-52">
+      <div className="flex flex-row h-full space-x-4">
         <Region
           round1={matchups.slice(16, 24)}
           round2={null}

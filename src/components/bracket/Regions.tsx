@@ -24,7 +24,7 @@ export function Region({ round1, right }: RegionProps) {
 
 function LeftRegion({ round1 }: RegionProps) {
   return (
-    <main className="flex flex-row w-full items-center justify-between border">
+    <main className="flex flex-row w-full items-stretch justify-around space-x-4">
       {/*Round 1*/}
       <div className="space-y-4">
         <MatchupCard matchup={round1 && round1[0] ? round1[0] : null} />
@@ -36,14 +36,17 @@ function LeftRegion({ round1 }: RegionProps) {
         <MatchupCard matchup={round1 && round1[6] ? round1[6] : null} />
         <MatchupCard matchup={round1 && round1[7] ? round1[7] : null} />
       </div>
-      <div className="flex flex-col h-full justify-between py-16">
+      <div className="flex flex-col h-full justify-evenly space-y-18">
         <MatchupCard matchup={null} />
         <MatchupCard matchup={null} />
         <MatchupCard matchup={null} />
         <MatchupCard matchup={null} />
       </div>
-      <div className="flex flex-col h-full justify-between py-40">
+      <div className="flex flex-col h-full justify-evenly space-y-44 -ml-20">
         <MatchupCard matchup={null} />
+        <MatchupCard matchup={null} />
+      </div>
+      <div className="flex flex-col h-full justify-center -ml-40">
         <MatchupCard matchup={null} />
       </div>
     </main>
@@ -52,18 +55,21 @@ function LeftRegion({ round1 }: RegionProps) {
 
 function RightRegion({ round1 }: RegionProps) {
   return (
-    <main className="flex flex-row w-full items-center justify-between border">
+    <main className="flex flex-row w-full items-stretch justify-around space-x-4">
+      <div className="flex flex-col h-full justify-center -mr-40">
+        <MatchupCard matchup={null} />
+      </div>
+      <div className="flex flex-col h-full justify-evenly space-y-44 -mr-20">
+        <MatchupCard matchup={null} />
+        <MatchupCard matchup={null} />
+      </div>
+      <div className="flex flex-col h-full justify-evenly space-y-18">
+        <MatchupCard matchup={null} />
+        <MatchupCard matchup={null} />
+        <MatchupCard matchup={null} />
+        <MatchupCard matchup={null} />
+      </div>
       {/*Round 1*/}
-      <div className="flex flex-col h-full justify-between py-40">
-        <MatchupCard matchup={null} />
-        <MatchupCard matchup={null} />
-      </div>
-      <div className="flex flex-col h-full justify-between py-16">
-        <MatchupCard matchup={null} />
-        <MatchupCard matchup={null} />
-        <MatchupCard matchup={null} />
-        <MatchupCard matchup={null} />
-      </div>
       <div className="space-y-4">
         <MatchupCard matchup={round1 && round1[0] ? round1[0] : null} />
         <MatchupCard matchup={round1 && round1[1] ? round1[1] : null} />
