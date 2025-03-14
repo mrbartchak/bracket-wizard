@@ -13,8 +13,8 @@ interface MatchupCardProps {
 export function MatchupCard({ matchup }: MatchupCardProps) {
   return (
     <div>
-      <Card className="w-52 py-3 drop-shadow-lg rounded-md">
-        <CardContent className="space-y-2">
+      <Card className="w-52 p-0 drop-shadow-lg rounded-md">
+        <CardContent className="p-0">
           <TeamCard team={matchup?.team1 ?? null} />
           <Separator />
           <TeamCard team={matchup?.team2 ?? null} />

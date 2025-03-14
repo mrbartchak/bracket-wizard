@@ -20,6 +20,7 @@ export function MarchMadnessBracket() {
           const mappedTeams = data.teams.map((team: any) => ({
             name: team.team_name,
             seed: team.team_id,
+            logo: team.team_logo,
           }));
           setTeams(mappedTeams);
         } else {

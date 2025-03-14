@@ -4,7 +4,10 @@ import { createClient } from "@/lib/supabase/server";
 export async function GET() {
   try {
     const supabase = await createClient();
-    const { data: teams, error } = await supabase.from("Teams").select();
+    const { data: teams, error } = await supabase
+      .from("Teams")
+      .select()
+      .order("team_id", { ascending: true });
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 });
