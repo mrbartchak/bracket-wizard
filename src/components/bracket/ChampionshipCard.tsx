@@ -1,5 +1,4 @@
 import { Matchup } from "@/types/bracket";
-import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -23,21 +22,11 @@ export function ChampionshipCard({ matchup }: ChampionshipCardProps) {
         </CardHeader>
         <CardContent className="flex flex-row justify-between space-x-4">
           <div className="flex flex-1 flex-row items-center space-x-4">
-            <Image
-              src={"/images/" + matchup?.team1?.details?.logo}
-              alt="Championship Team 1 Logo"
-              width={48} height={48}
-            />
             <p>{matchup?.team1?.name}</p>
           </div>
           <Separator orientation="vertical" />
           <div className="flex flex-1 flex-row justify-end items-center space-x-4">
             <p>{matchup?.team2?.name}</p>
-            <Image
-              src={"/images/" + matchup?.team2?.details?.logo}
-              alt="Championship Team 2 Logo"
-              width={48} height={48}
-            />
           </div>
         </CardContent>
       </Card>
