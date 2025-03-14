@@ -21,18 +21,21 @@ export function TeamCard({ team: Team }: TeamCardProps) {
         <Skeleton className="w-6 h-6 my-1 ml-1 mr-3 rounded-full" />
       )}
 
-      <p
-        className="text-xs opacity-50 w-2"
-      >
-        {Team?.seed ?? "-"}
-      </p>
-
-      <p
+      {Team ? (
+        <>
+          <p className="text-xs opacity-50 w-2">
+        {Team.seed ?? "-"}
+          </p>
+          <p
         className="font-semibold text-xs"
-        style={{ color: Team ? Team.details?.color ?? "black" : "lightgray" }}
-      >
-        {Team?.name ?? "TBD"}
-      </p>  
+        style={{ color: Team.details?.color ?? "black" }}
+          >
+        {Team.name}
+          </p>
+        </>
+      ) : (
+        <Skeleton className="w-[75%] h-4 rounded" />
+      )}
     </main>
   );
 }
