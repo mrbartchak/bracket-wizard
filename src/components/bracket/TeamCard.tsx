@@ -8,7 +8,7 @@ interface TeamCardProps {
 
 export function TeamCard({ team: Team }: TeamCardProps) {
   return (
-    <main className="flex flex-row items-center p-1 space-x-2 hover:bg-gray-100 rounded">
+    <main className="flex flex-row items-center h-10 p-1 space-x-2 hover:bg-gray-100 rounded">
       {Team?.logo ? (
         <Image
           src={Team.logo}
