@@ -1,6 +1,7 @@
 export interface Team {
   name: string;
   seed: number;
+  logo?: string;
   details?: TeamDetails;
   stats?: TeamStats;
 }
